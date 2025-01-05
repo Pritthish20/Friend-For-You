@@ -53,7 +53,7 @@ exports.signUp = async (req, res) => {
 
         const options = {
             expires: new Date(Date.now() + 6 * 60 * 60 * 1000),
-            httpOnly: true
+            // httpOnly: true
         }
 
         return res.cookie("token", token, options).status(200).json({
@@ -105,7 +105,7 @@ exports.logIn = async (req, res) => {
 
             const options = {
                 expires: new Date(Date.now() + 6 * 60 * 60 * 1000),
-                httpOnly: true
+                // httpOnly: true
             }
 
             return res.cookie("token", token, options).status(200).json({
