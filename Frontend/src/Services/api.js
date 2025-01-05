@@ -1,4 +1,4 @@
-export const BASE_URL = "https://friend-for-you.vercel.app";
+export const BASE_URL = "https://friend-for-you.vercel.app/api/v1";
 
 // AUTH ENDPOINTS
 export const authEndPoints = {
