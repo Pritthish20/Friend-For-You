@@ -23,7 +23,13 @@ const userRoutes = require("./routes/User");
 
 const allowedOrigins = ["http://localhost:3000", "https://friend-for-you-isbi.vercel.app"];
 app.use(cors({origin:allowedOrigins, credentials:true}));
-app.options('*', cors(corsOptions));
+app.options('*', (req, res) => {
+  res.set('Access-Control-Allow-Origin', 'https://friend-for-you-isbi.vercel.app');
+  res.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.send();
+});
+
 app.use(express.json());
 
 app.use("/api/v1/auth", authRoutes);
