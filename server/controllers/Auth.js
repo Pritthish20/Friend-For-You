@@ -60,7 +60,7 @@ exports.signUp = async (req, res) => {
             
         }
 
-        console.log("Token generated",token);
+        // console.log("Token generated",token);
         
         return res.cookie("token", token, options).status(200).json({
             success: true,
@@ -116,7 +116,7 @@ exports.logIn = async (req, res) => {
                 secure: true,
         sameSite: "none",
             }
-            console.log("Token generated",token);
+            // console.log("Token generated",token);
 
             return res.cookie("token", token, options).status(200).json({
                 success: true,
