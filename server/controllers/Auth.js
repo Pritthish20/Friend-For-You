@@ -53,6 +53,8 @@ exports.signUp = async (req, res) => {
 
         const options = {
             expires: new Date(Date.now() + 6 * 60 * 60 * 1000),
+            secure: true,
+        sameSite: "none",
             // httpOnly: true
             secure: true,
         sameSite: "none",
@@ -111,6 +113,8 @@ exports.logIn = async (req, res) => {
 
             const options = {
                 expires: new Date(Date.now() + 6 * 60 * 60 * 1000),
+                secure: true,
+        sameSite: "none",
                 // httpOnly: true
                 secure: true,
         sameSite: "none",
