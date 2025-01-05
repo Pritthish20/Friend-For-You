@@ -21,7 +21,7 @@ database.connect();
 const authRoutes = require("./routes/Auth");
 const userRoutes = require("./routes/User");
 
-const allowedOrigins = ["http://localhost:3000", ""];
+const allowedOrigins = ["http://localhost:3000", "https://friend-for-you-isbi.vercel.app/"];
 app.use(cors({origin:allowedOrigins, credentials:true}));
 app.use(express.json());
 
