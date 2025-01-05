@@ -2,8 +2,8 @@ export const BASE_URL = "https://friend-for-you.vercel.app/api/v1";
 
 // AUTH ENDPOINTS
 export const authEndPoints = {
-    SIGNUP_API : BASE_URL + "/auth/signUp",
-    LOGIN_API : BASE_URL + "/auth/logIn"
+    SIGNUP_API: `${BASE_URL}/auth/signUp`,
+    LOGIN_API: `${BASE_URL}/auth/logIn`
 }
 
 // USER ENDPOINTS
