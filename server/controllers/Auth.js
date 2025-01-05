@@ -54,8 +54,14 @@ exports.signUp = async (req, res) => {
         const options = {
             expires: new Date(Date.now() + 6 * 60 * 60 * 1000),
             // httpOnly: true
+            secure: true,
+        sameSite: "none",
+            
+            
         }
 
+        console.log("Token generated",token);
+        y
         return res.cookie("token", token, options).status(200).json({
             success: true,
             token,
@@ -106,7 +112,10 @@ exports.logIn = async (req, res) => {
             const options = {
                 expires: new Date(Date.now() + 6 * 60 * 60 * 1000),
                 // httpOnly: true
+                secure: true,
+        sameSite: "none",
             }
+            console.log("Token generated",token);
 
             return res.cookie("token", token, options).status(200).json({
                 success: true,
